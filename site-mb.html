@@ -4,167 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BM variedades</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      background-color: #f2f2f2; /* Cinza claro */
-      padding-bottom: 100px; /* Altura do rodapé */
-    }
-
-    .header {
-      background-color: #0fa8c0; /* Cinza escuro */
-      color: #fff; /* Texto branco */
-      padding: 30px;
-      text-align: center;
-    }
-
-    .header h1 {
-      margin: 0;
-    }
-
-    .nav {
-      display: inline-block;
-    }
-
-    .nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    .nav ul li {
-      display: inline;
-      margin-right: 20px;
-    }
-
-    .nav ul li a {
-      color: #fff;
-      text-decoration: none;
-    }
-
-    .produtos {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-    }
-
-    .produto {
-      background-color: #fff;
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      margin-bottom: 20px;
-      padding: 20px;
-      width: 250px; /* Largura padrão */
-      text-align: center;
-    }
-
-    .produto img {
-      width: 100%; /* Imagem preenche toda a largura do container */
-      height: auto; /* Altura ajustada automaticamente */
-      margin-bottom: 10px; /* Espaço entre a imagem e o conteúdo abaixo */
-    }
-
-    .produto h2 {
-      margin: 10px 0;
-    }
-
-    .produto p {
-      margin: 5px 0;
-    }
-
-    .produto a {
-      display: inline-block;
-      background-color: #007bff; /* Azul */
-      color: #fff;
-      padding: 10px 20px;
-      border-radius: 5px;
-      text-decoration: none;
-      transition: background-color 0.3s;
-    }
-
-    .produto a:hover {
-      background-color: #0056b3; /* Azul escuro */
-    }
-
-    footer {
-      background-color: #a3a1a1; /* Cinza escuro */
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
-
-    footer {
-      background-color: #666; /* Cinza escuro */
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
-
-    footer p {
-      margin: 5px 0;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="header">
     <h1>BM Variedades</h1>
     <nav class="nav">
       <ul>
-        <li><a href="#produtos">Produtos</a></li>
+        <li><a href="#produtos" id="btnRoupasFemininas">Produtos</a></li>
       </ul>
     </nav>
   </header>
-  <section id="produtos" class="produtos">
-    <div class="produto">
-      <img src="image/blusa-vermelha-bordada.jpeg" alt="">
-      <h2>Camisa Femina Bordada</h2>
-      <p>Preço: R$ 99,99</p>
-      <a href="https://wa.me/qr/AIZ4RFGKEVIMI1">Comprar</a>
-    </div>
-    
-    <div class="produto">
-      <img src="image/blusa-amarela-normal.jpeg" alt="pequena">
-      <h2>Blusa normal</h2>
-      <p>Preço: R$ 49,99</p>
-      <a href="https://wa.me/qr/AIZ4RFGKEVIMI1">Comprar</a>
-    </div>
 
-    <div class="produto">
-      <img src="image/blusa-normal.jpeg" alt="Perfume 1">
-      <h2>Blusa normal</h2>
-      <p>Preço: R$ 49,99</p>
-      <a href="https://wa.me/qr/AIZ4RFGKEVIMI1">Comprar</a>
-    </div>
+  <div class="categorias">
+    <button><a href="produtos-roupas-femininas.html">Roupas Femininas</a></button>
+    <button>Roupas Masculinas</button>
+    <button>Perfumes</button>
+  </div>
 
-    <div class="produto">
-      <img src="image/blusa-rocha-sem-borda.jpeg" alt="Perfume 1">
-      <h2>Blusa normal</h2>
-      <p>Preço: R$ 49,99</p>
-      <a href="https://wa.me/qr/AIZ4RFGKEVIMI1">Comprar</a>
-    </div>
+  <div id="conteudoProdutos"></div>
 
-    <div class="produto">
-      <img src="image/blusa-verde-normal.jpeg" alt="Perfume 1">
-      <h2>Blusa normal</h2>
-      <p>Preço: R$ 49,99</p>
-      <a href="https://wa.me/qr/AIZ4RFGKEVIMI1">Comprar</a>
-    </div>
-    
-    <!-- Adicione mais produtos conforme necessário -->
-  </section>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <footer>
     <p>BM Variedades</p>
     <p>Endereço: Ponta De Pedras/PA/MARAJÓ</p>
