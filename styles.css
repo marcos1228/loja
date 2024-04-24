@@ -9,10 +9,14 @@ body {
   }
   
   .header {
-    background-color: #c06a0f; /* Cinza escuro */
+    background-image: url('image/blusa-vermelha-bordada.jpeg');
+    background-size: cover; /* Para cobrir todo o cabeçalho */
+    background-position: center;
+    background-color: #87CEEB; /* Cinza escuro */
     color: #fff; /* Texto branco */
     padding: 30px;
     text-align: center;
+    margin-bottom: 20px; /* Espaço inferior */
   }
   
   .header h1 {
@@ -39,12 +43,10 @@ body {
     text-decoration: none;
   }
   
-  
   .categorias {
-    text-align: center;
-    color: #fff;
-    margin-bottom: 20px;
-    margin-top: 50px; /* Espaço superior */
+    display: flex; /* Use flexbox */
+    flex-wrap: wrap; /* Permita que os botões quebrem para a próxima linha se não houver espaço suficiente */
+    justify-content: center; /* Centralize os botões horizontalmente */
   }
   
   .categorias button {
@@ -56,7 +58,9 @@ body {
     cursor: pointer;
     transition: background-color 0.3s;
     margin: 0 10px; /* Espaçamento entre os botões */
-    width: 100%; /* Largura total */
+    width: calc((100% - 40px) / 3); /* Distribua igualmente em 3 colunas com margem de 10px em cada lado */
+    max-width: 250px; /* Largura máxima para evitar que os botões fiquem muito grandes */
+    box-sizing: border-box; /* Inclua padding e border na largura total */
   }
   .categorias button:hover {
     background-color: #0056b3; /* Azul escuro */
