@@ -12,12 +12,11 @@ body {
 .header {
   background-size: cover; /* Para cobrir todo o cabeçalho */
   background-position: center;
-  background-color: #ea0d4b; /* Cinza escuro */
+  background-color: #007bff; /* Cinza escuro */
   color: #fff; /* Texto branco */
   padding: 30px;
   text-align: center;
   margin-bottom: 20px; /* Espaço inferior */
-  height: 200px; /* Altura desejada */
   position: relative; /* Torna o posicionamento relativo para o título */
 }
 
