@@ -1,166 +1,181 @@
 /* Estilos padrão */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #f2f2f2; /* Cinza claro */
-    padding-bottom: 100px; /* Altura do rodapé */
-    overflow-y: auto;
-  }
-  
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f2f2f2; /* Cinza claro */
+  padding-bottom: 100px; /* Altura do rodapé */
+  overflow-y: auto;
+}
+
+.header {
+  background-size: cover; /* Para cobrir todo o cabeçalho */
+  background-position: center;
+  background-color: #ea0d4b; /* Cinza escuro */
+  color: #fff; /* Texto branco */
+  padding: 30px;
+  text-align: center;
+  margin-bottom: 20px; /* Espaço inferior */
+  height: 200px; /* Altura desejada */
+  position: relative; /* Torna o posicionamento relativo para o título */
+}
+
+.header h1 {
+  margin: 0;
+  position: absolute; /* Torna o posicionamento absoluto para o título */
+  top: 10px; /* Posiciona o título 10px a partir do topo */
+  left: 50%; /* Centraliza o título horizontalmente */
+  transform: translateX(-50%); /* Move o título para a esquerda em 50% da largura do próprio título */
+  animation: moveTitle 10s linear infinite; /* Aplica a animação de translação ao título */
+}
+
+.nav {
+  display: inline-block;
+}
+
+.nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.categorias {
+  display: flex; /* Use flexbox */
+  flex-wrap: wrap; /* Permita que os botões quebrem para a próxima linha se não houver espaço suficiente */
+  justify-content: center; /* Centralize os botões horizontalmente */
+}
+
+.categorias button {
+  padding: 10px 15px; /* Reduza o padding dos botões */
+  background-color: #007bff; /* Azul */
+  color: #fff; /* Texto branco */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 0 5px 10px; /* Espaçamento entre os botões */
+  width: calc(50% - 10px); /* Distribua igualmente em 2 colunas com margem de 5px em cada lado */
+  max-width: 200px; /* Largura máxima para evitar que os botões fiquem muito grandes */
+  box-sizing: border-box; /* Inclua padding e border na largura total */
+}
+
+.categorias a {
+  display: inline-block;
+  background-color: #007bff; /* Azul */
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.categorias button:hover {
+  background-color: #0056b3; /* Azul escuro */
+}
+
+.produtos {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.produto {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+  width: 250px; /* Largura padrão */
+  text-align: center;
+}
+
+.produto img {
+  width: 100%; /* Imagem preenche toda a largura do container */
+  height: auto; /* Altura ajustada automaticamente */
+  margin-bottom: 10px; /* Espaço entre a imagem e o conteúdo abaixo */
+}
+
+.produto h2 {
+  margin: 10px 0;
+}
+
+.produto p {
+  margin: 5px 0;
+}
+
+.produto a {
+  display: inline-block;
+  background-color: #007bff; /* Azul */
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.produto a:hover {
+  background-color: #0056b3; /* Azul escuro */
+}
+
+footer {
+  background-color: #666; /* Cinza escuro */
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+.categorias button a {
+  text-decoration: none; /* Remover underline */
+}
+
+/* Media query para telas menores (como celulares) */
+@media only screen and (max-width: 768px) {
   .header {
-    background-image: url('image/banner/Banner-entrada.png');
-    background-size: cover; /* Para cobrir todo o cabeçalho */
-    background-position: center;
-    background-color: #87CEEB; /* Cinza escuro */
-    color: #fff; /* Texto branco */
-    padding: 20px;
-    text-align: center;
-    margin-bottom: 20px; /* Espaço inferior */
+    padding: 50px; /* Reduz o padding do cabeçalho para telas menores */
+    height: 150px; /* Reduz a altura do cabeçalho */
   }
-  
-  .header h1 {
-    margin: 0;
-  }
-  
-  .nav {
-    display: inline-block;
-  }
-  
-  .nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .nav ul li {
-    display: inline;
-    margin-right: 20px;
-  }
-  
-  .nav ul li a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  .categorias {
-    display: flex; /* Use flexbox */
-    flex-wrap: wrap; /* Permita que os botões quebrem para a próxima linha se não houver espaço suficiente */
-    justify-content: center; /* Centralize os botões horizontalmente */
-  }
-  
+
   .categorias button {
-    padding: 10px 20px;
-    background-color: #007bff; /* Azul */
-    color: #fff; /* Texto branco */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin: 0 10px; /* Espaçamento entre os botões */
-    width: calc((100% - 40px) / 3); /* Distribua igualmente em 3 colunas com margem de 10px em cada lado */
-    max-width: 250px; /* Largura máxima para evitar que os botões fiquem muito grandes */
-    box-sizing: border-box; /* Inclua padding e border na largura total */
+    width: calc(100% - 10px); /* Altera a largura dos botões de categoria para ocupar toda a largura disponível */
+    margin: 0 5px 10px; /* Reduz a margem entre os botões */
   }
-  
-  .categorias button:hover {
-    background-color: #0056b3; /* Azul escuro */
-  }
-  
+
   .produtos {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    padding: 5px; /* Reduz o padding para os produtos em telas menores */
   }
-  
+
   .produto {
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    padding: 20px;
-    width: 250px; /* Largura padrão */
-    text-align: center;
+    width: calc(100% - 10px); /* Faz com que os produtos ocupem toda a largura da tela */
   }
-  
-  .produto img {
-    width: 100%; /* Imagem preenche toda a largura do container */
-    height: auto; /* Altura ajustada automaticamente */
-    margin-bottom: 10px; /* Espaço entre a imagem e o conteúdo abaixo */
+}
+
+/* Animação de translação do título */
+@keyframes moveTitle {
+  0% {
+    transform: translateX(-100%); /* Move o título para a esquerda para fora da tela */
   }
-  
-  .produto h2 {
-    margin: 10px 0;
+  100% {
+    transform: translateX(100%); /* Move o título para a direita para fora da tela */
   }
-  
-  .produto p {
-    margin: 5px 0;
-  }
-  
-  .produto a {
-    display: inline-block;
-    background-color: #007bff; /* Azul */
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-  }
-  
-  .produto a:hover {
-    background-color: #0056b3; /* Azul escuro */
-  }
-  
-  footer {
-    background-color: #a3a1a1; /* Cinza escuro */
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-  }
-  
-  footer {
-    background-color: #666; /* Cinza escuro */
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-  }
-  
-  footer p {
-    margin: 5px 0;
-  }
-  
-  .categorias button a {
-    text-decoration: none; /* Remover underline */
-  }
-  
-  /* Media query para telas menores (como celulares) */
-  @media only screen and (max-width: 768px) {
-    .header {
-      padding: 100px; /* Reduz o padding do cabeçalho para telas menores */
-    }
-  
-    .categorias button {
-      width: calc(50% - 20px); /* Altera a largura dos botões de categoria para ocupar metade da largura disponível */
-      margin: 0 10px 10px; /* Reduz a margem entre os botões */
-    }
-  
-    .produtos {
-      padding: 10px; /* Reduz o padding para os produtos em telas menores */
-    }
-  
-    .produto {
-      width: calc(50% - 20px); /* Faz com que os produtos ocupem metade da largura da tela */
-      margin-bottom: 20px;
-    }
-  }
-  
+}
