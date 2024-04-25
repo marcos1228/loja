@@ -1,6 +1,7 @@
 /* Estilos padrão */
 body {
   font-family: Arial, sans-serif;
+  background-image: url('image/body/imagem-body.png');
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -12,7 +13,7 @@ body {
 .header {
   background-size: cover; /* Para cobrir todo o cabeçalho */
   background-position: center;
-  background-color: #007bff; /* Cinza escuro */
+  background-color:  #C16512; /* Cinza escuro */
   color: #fff; /* Texto branco */
   padding: 30px;
   text-align: center;
