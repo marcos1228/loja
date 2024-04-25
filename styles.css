@@ -1,3 +1,4 @@
+/* Estilos padrão */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -14,7 +15,7 @@ body {
     background-position: center;
     background-color: #87CEEB; /* Cinza escuro */
     color: #fff; /* Texto branco */
-    padding: 140px;
+    padding: 20px;
     text-align: center;
     margin-bottom: 20px; /* Espaço inferior */
   }
@@ -62,6 +63,7 @@ body {
     max-width: 250px; /* Largura máxima para evitar que os botões fiquem muito grandes */
     box-sizing: border-box; /* Inclua padding e border na largura total */
   }
+  
   .categorias button:hover {
     background-color: #0056b3; /* Azul escuro */
   }
@@ -139,5 +141,26 @@ body {
   
   .categorias button a {
     text-decoration: none; /* Remover underline */
+  }
+  
+  /* Media query para telas menores (como celulares) */
+  @media only screen and (max-width: 768px) {
+    .header {
+      padding: 100px; /* Reduz o padding do cabeçalho para telas menores */
+    }
+  
+    .categorias button {
+      width: calc(50% - 20px); /* Altera a largura dos botões de categoria para ocupar metade da largura disponível */
+      margin: 0 10px 10px; /* Reduz a margem entre os botões */
+    }
+  
+    .produtos {
+      padding: 10px; /* Reduz o padding para os produtos em telas menores */
+    }
+  
+    .produto {
+      width: calc(50% - 20px); /* Faz com que os produtos ocupem metade da largura da tela */
+      margin-bottom: 20px;
+    }
   }
   
