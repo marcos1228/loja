@@ -33,6 +33,21 @@
 #nextBtn {
   right: 10px;
 }
+/* Estilos dos botões de navegação */
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Ajuste conforme necessário */
+}
+
+.nav-buttons button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 0 5px; /* Espaçamento entre os botões */
+}
 body {
   font-family: Arial, sans-serif;
   margin: 0;
