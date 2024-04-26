@@ -1,3 +1,38 @@
+.carousel-container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-slide img {
+  width: 42%;
+  height: auto;
+}
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+#prevBtn {
+  left: 10px;
+}
+
+#nextBtn {
+  right: 10px;
+}
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -13,7 +48,6 @@ body {
   background-position: center;
   background-color:  #b87400; /* Cinza escuro */
   color: #fff; /* Texto branco */
-  padding: 30px;
   text-align: center;
   margin-bottom: 20px; /* Espaço inferior */
   position: relative; /* Torna o posicionamento relativo para o título */
@@ -149,8 +183,8 @@ footer p {
 /* Media query para telas menores (como celulares) */
 @media only screen and (max-width: 768px) {
   .header {
-    padding: 50px; /* Reduz o padding do cabeçalho para telas menores */
-    height: 150px; /* Reduz a altura do cabeçalho */
+    padding: 0px;
+    height: 87px;
   }
 
   .categorias button {

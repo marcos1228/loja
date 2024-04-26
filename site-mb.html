@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<link rel="icon" type="image/icon/sacolas-de-compras.png" href="image/icon/sacolas-de-compras.png">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BM variedades</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/icon/sacolas-de-compras.png" href="image/icon/sacolas-de-compras.png">
 </head>
 <body>
   <header class="header">
     <h1>BM Variedades</h1>
-    <nav class="nav">
-    </nav>
+    <link rel="stylesheet" href="styles.css">
   </header>
 
   <div class="categorias">
@@ -20,12 +18,16 @@
     <button>Perfumes</button>
   </div>
 
-  <div class="carousel">
+  <div class="carousel-container">
     <div class="carousel-slide">
-      <img src="image1.jpg" alt="Imagem 1">
-      <img src="image2.jpg" alt="Imagem 2">
-      <img src="image3.jpg" alt="Imagem 3">
+      <img src="image/blusa-vermelha-bordada.jpeg" alt="Imagem 1">
+      <img src="image/blusa-amarela-normal.jpeg" alt="Imagem 2">
+      <img src="image/blusa-normal.jpeg" alt="Imagem 3">
+      <img src="image/blusa-rocha-sem-borda.jpeg" alt="Imagem 4">
+      <img src="image/blusa-verde-normal.jpeg" alt="Imagem 5">
     </div>
+    <button id="prevBtn" class="nav-btn">Anterior</button>
+    <button id="nextBtn" class="nav-btn">Próximo</button>
   </div>
   
   <footer>
@@ -35,6 +37,35 @@
     <p>Email: contato@bmvariedades.com</p>
     <p>&copy; 2024 BM Variedades - Todos os direitos reservados</p>
   </footer>
-  <script src="script.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const carouselSlide = document.querySelector('.carousel-slide');
+      const carouselImages = document.querySelectorAll('.carousel-slide img');
+      const prevBtn = document.querySelector('#prevBtn');
+      const nextBtn = document.querySelector('#nextBtn');
+      let counter = 0;
+
+      // Configurar largura do slide
+      const slideWidth = carouselImages[0].clientWidth;
+
+      // Configurar largura do contêiner de slides
+      carouselSlide.style.width = `${slideWidth * carouselImages.length}px`;
+
+      // Botão Próximo
+      nextBtn.addEventListener('click', () => {
+        if (counter >= carouselImages.length - 1) return;
+        counter++;
+        carouselSlide.style.transform = `translateX(${-slideWidth * counter}px)`;
+      });
+
+      // Botão Anterior
+      prevBtn.addEventListener('click', () => {
+        if (counter <= 0) return;
+        counter--;
+        carouselSlide.style.transform = `translateX(${-slideWidth * counter}px)`;
+      });
+    });
+  </script>
 </body>
 </html>
